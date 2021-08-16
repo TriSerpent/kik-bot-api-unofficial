@@ -687,6 +687,13 @@ class KikClient:
                 return user.jid
 
         return None
+    
+    def cache_jids():
+        jid_list = []
+        for user in self._known_users_information:
+            jid_list.append(user.jid)
+        return jid_list
+            
 
     @staticmethod
     def log_format():
